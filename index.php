@@ -12,13 +12,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <style>
-        header {
-            background-color: #06131f;
+        body {
+            background-color: #1d2d3c;
         }
 
-        main {
-            background-color: #1d2d3c;
-            height: 100vh;
+        header {
+            background-color: #06131f;
         }
 
         svg {
@@ -42,7 +41,65 @@
 
             <div class="container py-3">
 
-                <h1 class="text-light">{{message}}</h1>
+                <div class="row row-cols-3 g-2">
+                    <div class="col">
+                        <div class="card text-bg-dark">
+                            <img src="" alt="" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">
+                                    card title
+                                </h5>
+                                <p class="card-text">
+                                    author <br>
+                                    <strong>year</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-bg-dark">
+                            <img src="" alt="" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">
+                                    card title
+                                </h5>
+                                <p class="card-text">
+                                    author <br>
+                                    <strong>year</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-bg-dark">
+                            <img src="" alt="" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">
+                                    card title
+                                </h5>
+                                <p class="card-text">
+                                    author <br>
+                                    <strong>year</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-bg-dark">
+                            <img src="" alt="" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">
+                                    card title
+                                </h5>
+                                <p class="card-text">
+                                    author <br>
+                                    <strong>year</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
         </div>
