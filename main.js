@@ -3,7 +3,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            disks: null
+            disks: null,
         }
     },
     methods: {
@@ -12,9 +12,11 @@ createApp({
                 .get('./server.php')
                 .then(response => {
                     this.disks = response.data;
-                    console.log(this.disks);
-                })
-        }
+                    this.disks.forEach(disk => {
+                        disk.visible = false;
+                    });
+                });
+        },
     },
     mounted() {
         this.readData();

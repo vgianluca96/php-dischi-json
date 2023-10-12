@@ -24,6 +24,17 @@
             width: 200px;
             fill: green;
         }
+
+        .disk-detail {
+            position: fixed;
+            z-index: 1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(29, 45, 60, 0.8);
+            width: 90vW;
+            height: 90vh;
+        }
     </style>
 </head>
 
@@ -39,12 +50,12 @@
     <main>
         <div id="app">
 
-            <div class="container py-4">
+            <div class="container py-4 position-relative">
 
                 <div class="row row-cols-3 g-3">
 
                     <div class="col" v-for="disk in disks">
-                        <div class="card text-bg-dark">
+                        <div class="card text-bg-dark" @click="disk.visible = !disk.visible">
                             <img :src="disk.poster" alt="" class="card-img-top">
                             <div class="card-body text-center">
                                 <h5 class="card-title">
@@ -59,6 +70,23 @@
                                 </p>
                             </div>
                         </div>
+                        <div class="disk-detail" :class="{'d-none': !disk.visible}">
+                            <div class="row justify-content-center py-4">
+                                <div class="col-10 d-flex justify-content-end p-4">
+                                    <button class="btn btn-light" @click="disk.visible = ! disk.visible">
+                                        Close
+                                    </button>
+                                </div>
+                                <div class="col-12 d-flex flex-column align-items-center p-4">
+                                    <img :src="disk.poster" alt="" width="300">
+                                    <div class="text-center text-light py-3">
+                                        <h3>{{disk.title}}</h3>
+                                        <div>{{disk.author}}</div>
+                                        <div>{{disk.year}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -68,7 +96,6 @@
         </div>
 
     </main>
-
 
 
 
