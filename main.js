@@ -3,15 +3,20 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            message: 'Hello Vue!'
+            disks: null
         }
     },
     methods: {
-        myFunction() {
-            console.log(this.message);
+        readData() {
+            axios
+                .get('./server.php')
+                .then(response => {
+                    this.disks = response.data;
+                    console.log(this.disks);
+                })
         }
     },
     mounted() {
-        this.myFunction();
+        this.readData();
     }
 }).mount('#app')

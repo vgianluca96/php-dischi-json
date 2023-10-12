@@ -39,67 +39,30 @@
     <main>
         <div id="app">
 
-            <div class="container py-3">
+            <div class="container py-4">
 
-                <div class="row row-cols-3 g-2">
-                    <div class="col">
+                <div class="row row-cols-3 g-3">
+
+                    <div class="col" v-for="disk in disks">
                         <div class="card text-bg-dark">
-                            <img src="" alt="" class="card-img-top">
+                            <img :src="disk.poster" alt="" class="card-img-top">
                             <div class="card-body text-center">
                                 <h5 class="card-title">
-                                    card title
+                                    {{disk.title}}
                                 </h5>
                                 <p class="card-text">
-                                    author <br>
-                                    <strong>year</strong>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card text-bg-dark">
-                            <img src="" alt="" class="card-img-top">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">
-                                    card title
-                                </h5>
-                                <p class="card-text">
-                                    author <br>
-                                    <strong>year</strong>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card text-bg-dark">
-                            <img src="" alt="" class="card-img-top">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">
-                                    card title
-                                </h5>
-                                <p class="card-text">
-                                    author <br>
-                                    <strong>year</strong>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card text-bg-dark">
-                            <img src="" alt="" class="card-img-top">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">
-                                    card title
-                                </h5>
-                                <p class="card-text">
-                                    author <br>
-                                    <strong>year</strong>
+                                    {{disk.author}}
+                                    <br>
+                                    <strong>
+                                        {{disk.year}}
+                                    </strong>
                                 </p>
                             </div>
                         </div>
                     </div>
 
                 </div>
+
             </div>
 
         </div>
@@ -110,6 +73,7 @@
 
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js" integrity="sha512-emSwuKiMyYedRwflbZB2ghzX8Cw8fmNVgZ6yQNNXXagFzFOaQmbvQ1vmDkddHjm5AITcBIZfC7k4ShQSjgPAmQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src="./main.js"></script>
