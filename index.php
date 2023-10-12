@@ -77,12 +77,12 @@
                                         Close
                                     </button>
                                 </div>
-                                <div class="col-12 d-flex flex-column align-items-center p-4">
+                                <div class="col-10 d-flex flex-column align-items-center p-4">
                                     <img :src="disk.poster" alt="" width="300">
                                     <div class="text-center text-light py-3">
                                         <h3>{{disk.title}}</h3>
                                         <div>{{disk.author}}</div>
-                                        <div>{{disk.year}}</div>
+                                        <h4>{{disk.year}}</h4>
                                     </div>
                                 </div>
                             </div>
